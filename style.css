@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--background);
+}
+:root{
+    --text : #0A0529;
+    --background: #D7D1FA;
+    --primary: #C91859;
+    --secondary: #EDF6B1;
+}
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--background);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+    & h1 {
+        color: var(--text);
+        text-align: center;
+        padding-top: 1rem;
+    }
+    & span{
+        color: var(--primary);
+    }
+}
+
+.github{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.searchBox {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+.searchBox input {
+    width: 300px;
+    height: 50px;
+    padding: 10px 30px;
+    border-top-left-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border: 3px solid var(--primary);
+    letter-spacing: 2px;
+}
+.searchBox input:focus{
+    outline: none;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 5px var(--primary);
+}
+.searchBox button {
+    height: 50px;
+    padding: 10px 30px;
+    border-top-right-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-bottom-right-radius: 10px;
+    border: 0px;
+    color: var(--text);
+    cursor: pointer;
+    background-color: var(--primary);
+    transition: 0.2s ease;
+}
+
+.searchBox button:hover {
+    background: transparent;
+    box-shadow: ease-in-out 0.3s;
+    border: 2px solid var(--primary);
+    color: var(--primary);   
+    box-shadow: 0 0 10px var(--primary);
+}
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.profile-image img{
+    width: 200px;
+    border-radius: 10px ;
+    border: 5px solid var(--primary);
+    margin-right: 2rem;
+    padding: 10px;
+}
+
+.new-repo{
+    /* line-height: 30px; */
+    padding: 0px 20px;
+    font-weight: 600;
+    /* height: 200px; */
+    & a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.profile-info p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.profile{
+    display: none;
+}
+@media screen and (max-width: 620px) {
+    .searchBox:hover>.searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+}
